@@ -1,0 +1,61 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+/* .product h2 removes the extra spacing from headers in the div*/
+.product h2{ 
+    margin: 0px;
+}
+/*flex wrap can be used to clear floats in the product list and fix rows */
+#product-list {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+}
+
+/* Pseudo-classes for link behavior and order with errors */
+/* Styles each link for hover and visiting each link */
+.product a {
+  color: blue;
+  text-decoration: none;;
+}
+
+.product a:hover {
+  color: red;
+}
+
+.product a:visited {
+  color:green;
+}
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+ #product-list::after {
+    /* used to clear floats in the prduct list */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Please use google to find out what this block of code is and why it is being used in this code */
+
+  /* Its used to clear floats allowing everything to fit and lines up properly.*/
+  
+/* Clear floats to avoid parent collapse */
